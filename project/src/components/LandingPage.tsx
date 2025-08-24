@@ -60,32 +60,57 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
             ArchitectGood
           </div>
           <div className="space-x-6 flex items-center">
-            <button onClick={() => scrollToSection('home')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium">
-              Home
+            <button onClick={() => scrollToSection('home')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-home">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+              <span>Home</span>
             </button>
-            <button onClick={() => scrollToSection('features')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium">
-              Features
+            <button onClick={() => scrollToSection('features')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+              <span>Features</span>
             </button>
-            <button onClick={() => scrollToSection('services')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium">
-              Services
+            <button onClick={() => scrollToSection('services')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase">
+                <rect width="20" height="14" x="2" y="7" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+              <span>Services</span>
             </button>
-            <button onClick={() => scrollToSection('how-it-works')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium">
-              How It Works
+            <button onClick={() => scrollToSection('how-it-works')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb">
+                <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 6c0 1.8.7 3.3 1.5 4.5 1 .8 1.5 2.1 1.5 3.5L12 22l3-8Z"/>
+                <path d="M2 17h2c1.5 0 3-.5 4.5-1.3m8.5 1.3h2c1.5 0 3-.5 4.5-1.3"/>
+              </svg>
+              <span>How It Works</span>
             </button>
-            <button onClick={onViewBlog} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium">
-              Blog
+            
+            <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail">
+                <rect width="20" height="16" x="2" y="4" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.9 1.9 0 0 1-2.06 0L2 7"/>
+              </svg>
+              <span>Contact</span>
             </button>
-            <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium">
-              Contact
-            </button>
-            <button onClick={() => scrollToSection('testimonials')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium">
-              Testimonials
+            <button onClick={() => scrollToSection('testimonials')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+              <span>Testimonials</span>
             </button>
             <button
               onClick={onLogin}
-              className="px-6 py-2 bg-primary text-white font-semibold rounded-full shadow-lg hover:bg-primary-dark transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl text-lg"
+              className="px-6 py-2 bg-primary text-white font-semibold rounded-full shadow-lg hover:bg-primary-dark transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl text-lg flex items-center space-x-1"
             >
-              Login
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in">
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+                <polyline points="10 17 15 12 10 7"/>
+                <line x1="15" x2="3" y1="12" y2="12"/>
+              </svg>
+              <span>Login</span>
             </button>
           </div>
         </div>
@@ -93,12 +118,15 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
 
       {/* Hero Section (Home) */}
       <section id="home" className="relative flex items-center justify-center h-screen pt-16 overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1550439062-609e1d87538e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Software Architecture and AI"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black opacity-50"></div> {/* Overlay for text readability */}
+        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-primary-light to-primary opacity-70"></div> {/* Background gradient */}
+        <svg className="absolute inset-0 w-full h-full opacity-30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+              <path d="M 10 0 L 0 0 L 0 10" fill="none" stroke="white" stroke-width="0.2" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
         <div className="text-center px-4 relative z-10">
           <button
             onClick={() => scrollToSection('home')}
@@ -127,7 +155,19 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* Feature 1: AI-Powered Generation */}
             <div className="bg-neutral-50 p-8 rounded-xl shadow-lg border border-neutral-200 transform hover:scale-105 transition duration-300 group">
-              <div className="text-primary mb-4 text-5xl flex justify-center"><i className="lucide lucide-sparkles"></i></div>
+              <div className="text-primary mb-4 text-5xl flex justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles">
+                  <path d="M9.9 10.8c.3.9.9 1.6 1.6 1.6H12l-1.7 2.1c-.3.4-.6.8-.8 1.3-.2.5-.3 1-.3 1.6 0 .6.1 1.1.3 1.6.2.5.5.9.8 1.3l1.7 2.1h-1.6c-.7 0-1.3-.7-1.6-1.6-.3-.9-.9-1.6-1.6-1.6H8l1.7-2.1c.3-.4.6-.8.8-1.3.2-.5.3-1 .3-1.6 0-.6-.1-1.1-.3-1.6-.2-.5-.5-.9-.8-1.3L8 8.7h1.6c.7 0 1.3.7 1.6 1.6z"/>
+                  <path d="M12 2v2"/>
+                  <path d="M12 20v2"/>
+                  <path d="M20 12h2"/>
+                  <path d="M2 12h2"/>
+                  <path d="m18.5 5.5-1.4 1.4"/>
+                  <path d="m6.5 17.5-1.4 1.4"/>
+                  <path d="m17.5 6.5 1.4-1.4"/>
+                  <path d="m6.5 6.5 1.4-1.4"/>
+                </svg>
+              </div>
               <h3 className="text-2xl font-semibold mb-4 text-primary text-center">AI-Powered Generation</h3>
               <p className="text-gray-700 text-center">
                 Leverage Google's Generative AI to effortlessly create code snippets, documentation, and complex diagrams from natural language descriptions.
@@ -135,7 +175,14 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
             </div>
             {/* Feature 2: Advanced Diagramming */}
             <div className="bg-neutral-50 p-8 rounded-xl shadow-lg border border-neutral-200 transform hover:scale-105 transition duration-300 group">
-              <div className="text-primary mb-4 text-5xl flex justify-center"><i className="lucide lucide-layout-dashboard"></i></div>
+              <div className="text-primary mb-4 text-5xl flex justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard">
+                  <rect width="7" height="9" x="3" y="3" rx="1"/>
+                  <rect width="7" height="5" x="14" y="3" rx="1"/>
+                  <rect width="7" height="9" x="14" y="12" rx="1"/>
+                  <rect width="7" height="5" x="3" y="16" rx="1"/>
+                </svg>
+              </div>
               <h3 className="text-2xl font-semibold mb-4 text-primary text-center">Advanced Diagramming</h3>
               <p className="text-gray-700 text-center">
                 Craft beautiful and precise Mermaid and PlantUML diagrams with a dedicated editor, complete with syntax highlighting, auto-completion, and validation.
@@ -143,7 +190,12 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
             </div>
             {/* Feature 3: Integrated Code Editor */}
             <div className="bg-neutral-50 p-8 rounded-xl shadow-lg border border-neutral-200 transform hover:scale-105 transition duration-300 group">
-              <div className="text-primary mb-4 text-5xl flex justify-center"><i className="lucide lucide-code"></i></div>
+              <div className="text-primary mb-4 text-5xl flex justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code">
+                  <polyline points="16 18 22 12 16 6"/>
+                  <polyline points="8 6 2 12 8 18"/>
+                </svg>
+              </div>
               <h3 className="text-2xl font-semibold mb-4 text-primary text-center">Integrated Code Editor</h3>
               <p className="text-gray-700 text-center">
                 Enjoy a powerful and customizable code editing experience with features like linting, search, and theme support, enhancing your productivity.
@@ -154,10 +206,18 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
       </section>
 
       {/* Services Section */}
-      <section id="services" ref={(el) => (sectionRefs.current.services = el)} className="py-20 bg-gradient-to-br from-white to-neutral-50 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23000000" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 0v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM12 34v-4h-2v4H6v2h4v4h2v-4h4v-2h-4zm0 0v-4h-2v4H6v2h4v4h2v-4h4v-2h-4z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}></div>
+      <section id="services" ref={(el) => (sectionRefs.current.services = el)} className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-cyan-500 to-blue-700 opacity-80"></div> {/* Very cool Background gradient */}
+        <svg className="absolute inset-0 w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <pattern id="hex-pattern" width="20" height="17.32" patternUnits="userSpaceOnUse">
+              <path d="M10 0 L20 5 L20 15 L10 20 L0 15 L0 5 Z" fill="#fff" fill-opacity="0.1" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#hex-pattern)" />
+        </svg>
         <div className="container mx-auto px-6 relative z-10">
-          <h2 className="text-4xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-primary-dark to-primary animate-fade-in-up">
+          <h2 className="text-4xl font-bold text-center mb-16 text-white animate-fade-in-up">
             Our Comprehensive Services
           </h2>
           <div className="space-y-20">
@@ -165,7 +225,15 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
             <div className="flex flex-col md:flex-row items-center bg-neutral-50 p-10 rounded-3xl shadow-2xl border border-neutral-200 transform transition duration-500 hover:scale-[1.02] hover:shadow-3xl group">
               <div className="md:w-1/3 flex justify-center mb-8 md:mb-0 md:pr-8">
                 <div className="text-primary text-8xl transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110">
-                  <i className="lucide lucide-building-2"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building-2">
+                    <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/>
+                    <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/>
+                    <path d="M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2"/>
+                    <path d="M10 6h4"/>
+                    <path d="M10 10h4"/>
+                    <path d="M10 14h4"/>
+                    <path d="M10 18h4"/>
+                  </svg>
                 </div>
               </div>
               <div className="md:w-2/3 text-center md:text-left">
@@ -187,7 +255,12 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
             <div className="flex flex-col md:flex-row items-center bg-neutral-50 p-10 rounded-3xl shadow-2xl border border-neutral-200 transform transition duration-500 hover:scale-[1.02] hover:shadow-3xl group">
               <div className="md:w-1/3 flex justify-center mb-8 md:mb-0 md:pr-8">
                 <div className="text-primary text-8xl transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110">
-                  <i className="lucide lucide-users"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
                 </div>
               </div>
               <div className="md:w-2/3 text-center md:text-left">
@@ -211,9 +284,37 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
       {/* Testimonials Section */}
       <section id="testimonials" ref={(el) => (sectionRefs.current.testimonials = el)} className="py-20 bg-neutral-100">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-primary-dark to-primary">
-            What Users Say
+          <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-primary-dark to-primary flex items-center justify-center space-x-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote-left">
+              <path d="M10.3 2.6a1 1 0 0 1 1.7.7L13 6.5a1 1 0 0 1-.7 1.7l-2.9-.7a1 1 0 0 1-.7-1.7l.7-2.9a1 1 0 0 1 1.7-.7z"/>
+              <path d="M10.3 13.6a1 1 0 0 1 1.7.7L13 17.5a1 1 0 0 1-.7 1.7l-2.9-.7a1 1 0 0 1-.7-1.7l.7-2.9a1 1 0 0 1 1.7-.7z"/>
+            </svg>
+            <span>What Users Say</span>
           </h2>
+
+          {/* New Illustrative SVG Diagram for Testimonials */}
+          <div className="flex justify-center mb-16">
+            <svg width="600" height="200" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+              {/* Speech Bubble 1 */}
+              <rect x="20" y="20" width="160" height="80" rx="20" ry="20" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
+              <circle cx="60" cy="110" r="10" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
+              <line x1="60" y1="100" x2="80" y2="120" stroke="#3b82f6" stroke-width="2"/>
+              <text x="100" y="70" font-family="Arial" font-size="24" fill="#333" text-anchor="middle">Great!</text>
+
+              {/* Speech Bubble 2 */}
+              <rect x="220" y="60" width="160" height="80" rx="20" ry="20" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
+              <circle cx="260" cy="150" r="10" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
+              <line x1="260" y1="140" x2="280" y2="160" stroke="#3b82f6" stroke-width="2"/>
+              <text x="300" y="110" font-family="Arial" font-size="24" fill="#333" text-anchor="middle">Awesome!</text>
+
+              {/* Speech Bubble 3 */}
+              <rect x="420" y="20" width="160" height="80" rx="20" ry="20" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
+              <circle cx="460" cy="110" r="10" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
+              <line x1="460" y1="100" x2="480" y2="120" stroke="#3b82f6" stroke-width="2"/>
+              <text x="500" y="70" font-family="Arial" font-size="24" fill="#333" text-anchor="middle">Fantastic!</text>
+            </svg>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Testimonial 1 */}
             <div className="bg-neutral-50 p-8 rounded-xl shadow-lg border border-neutral-200 flex flex-col items-center text-center">
@@ -241,11 +342,61 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
       </section>
 
       {/* How It Works: Mermaid & UML Section */}
-      <section id="how-it-works" ref={(el) => (sectionRefs.current.howItWorks = el)} className="py-20 bg-neutral-100">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-primary-dark to-primary">
-            How It Works: Diagram Generation
+      <section id="how-it-works" ref={(el) => (sectionRefs.current.howItWorks = el)} className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 w-full h-full bg-neutral-100 opacity-80"></div> {/* Background color */}
+        <svg className="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <pattern id="dot-pattern" width="10" height="10" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1" fill="#999" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#dot-pattern)" />
+        </svg>
+        <div className="container mx-auto px-6 relative z-10"> {/* Added relative z-10 to content */}
+          <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-primary-dark to-primary flex items-center justify-center space-x-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-git-branch-plus">
+              <path d="M6 3v12"/>
+              <path d="M18 9v12"/>
+              <path d="M12 6v.01"/>
+              <path d="M12 18v.01"/>
+              <path d="M6 15a6 6 0 0 0 12 0"/>
+              <path d="M12 12h6"/>
+              <path d="M15 9v6"/>
+            </svg>
+            <span>How It Works: Diagram Generation</span>
           </h2>
+
+          {/* New Illustrative SVG Diagram */}
+          <div className="flex justify-center mb-16">
+            <svg width="600" height="225" viewBox="0 0 600 225" xmlns="http://www.w3.org/2000/svg">
+              {/* Text Input */}
+              <rect x="30" y="75" width="150" height="75" rx="15" ry="15" fill="#fff" stroke="#3b82f6" stroke-width="3"/>
+              <text x="105" y="120" font-family="Arial" font-size="24" fill="#333" text-anchor="middle">Text Input</text>
+
+              {/* Arrow 1 */}
+              <line x1="180" y1="112.5" x2="270" y2="112.5" stroke="#3b82f6" stroke-width="3" marker-end="url(#arrowhead)"/>
+
+              {/* Process */}
+              <circle cx="300" cy="112.5" r="45" fill="#fff" stroke="#3b82f6" stroke-width="3"/>
+              <text x="300" y="120" font-family="Arial" font-size="24" fill="#333" text-anchor="middle">Process</text>
+
+              {/* Arrow 2 */}
+              <line x1="345" y1="112.5" x2="435" y2="112.5" stroke="#3b82f6" stroke-width="3" marker-end="url(#arrowhead)"/>
+
+              {/* Diagram Output */}
+              <rect x="450" y="75" width="120" height="75" rx="15" ry="15" fill="#fff" stroke="#3b82f6" stroke-width="3"/>
+              <path d="M465 90 L555 90 L555 135 L465 135 Z M510 90 L510 135 M465 112.5 L555 112.5" fill="none" stroke="#333" stroke-width="1.5"/>
+              <text x="510" y="120" font-family="Arial" font-size="24" fill="#333" text-anchor="middle">Diagram</text>
+
+              {/* Arrowhead definition */}
+              <defs>
+                <marker id="arrowhead" markerWidth="15" markerHeight="10.5" refX="0" refY="5.25" orient="auto">
+                  <polygon points="0 0, 15 5.25, 0 10.5" fill="#3b82f6" />
+                </marker>
+              </defs>
+            </svg>
+          </div>
+
           <div className="space-y-12">
             {/* Mermaid Explanation */}
             <div className="flex flex-col md:flex-row items-center bg-neutral-50 p-8 rounded-xl shadow-lg border border-neutral-200 group">
@@ -312,69 +463,151 @@ User "1" -- "*" Product : owns
         </div>
       </section>
 
-      {/* Blog Section */}
-      <section id="blog" ref={(el) => (sectionRefs.current.blog = el)} className="py-20 bg-white">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-primary-dark to-primary">
-            Our Blog
+      
+
+      {/* About Us Section */}
+      <section id="about" ref={(el) => (sectionRefs.current.about = el)} className="relative py-20 overflow-hidden mb-20">
+        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-primary-dark to-primary-light opacity-80"></div> {/* Background gradient */}
+        <svg className="absolute inset-0 w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <pattern id="triangle-pattern" width="10" height="10" patternUnits="userSpaceOnUse">
+              <path d="M5 0 L10 10 L0 10 Z" fill="#fff" fill-opacity="0.1" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#triangle-pattern)" />
+        </svg>
+        <div className="container mx-auto px-6 text-center relative z-10">
+          <h2 className="text-4xl font-bold mb-12 text-white flex items-center justify-center space-x-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 16v-4"/>
+              <path d="M12 8h.01"/>
+            </svg>
+            <span>Our Vision: Innovating Software Architecture with AI</span>
           </h2>
-          <div className="bg-neutral-50 p-8 rounded-xl shadow-lg border border-neutral-200 text-left">
-            <h3 className="text-3xl font-semibold mb-4 text-primary">The Importance of Software Architecture in Modern Development</h3>
-            <p className="text-gray-600 text-sm mb-4">August 24, 2025 | By ArchitectGood Team</p>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              In today's rapidly evolving technological landscape, software architecture stands as the backbone of any successful application. It's not just about writing code; it's about designing a robust, scalable, and maintainable system that can adapt to future demands.
-            </p>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              A well-defined architecture provides a clear roadmap for development, minimizes technical debt, and facilitates collaboration among large teams. It addresses critical concerns such as performance, security, reliability, and cost-effectiveness from the outset.
-            </p>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              At ArchitectGood, we believe that investing in sound software architecture is paramount. Our tools and consulting services are designed to help you lay a solid foundation for your projects, ensuring long-term success and innovation. From microservices to monolithic applications, understanding the architectural patterns and principles is key to building resilient software.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Stay tuned for more insights on architectural patterns, design principles, and best practices in our upcoming blog posts!
-            </p>
+
+          <div className="flex flex-col md:flex-row items-center gap-12 mb-16">
+            <div className="md:w-1/2 text-left">
+              <p className="text-lg text-white leading-relaxed mb-6">
+                At ArchitectGood, we believe in empowering developers and architects to build the future. Our platform seamlessly integrates cutting-edge AI with intuitive design tools, transforming complex architectural challenges into streamlined, collaborative workflows. We're dedicated to fostering innovation, ensuring scalability, and simplifying the art of software design.
+              </p>
+              <p className="text-lg text-white leading-relaxed">
+                Join us in redefining how software is conceptualized, designed, and brought to life.
+              </p>
+            </div>
+            <div className="md:w-1/2 flex justify-center items-center">
+              {/* Placeholder for a more complex SVG illustration */}
+              <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-white opacity-70">
+                <circle cx="100" cy="100" r="80" stroke-dasharray="5 5" />
+                <line x1="20" y1="100" x2="180" y2="100" />
+                <line x1="100" y1="20" x2="100" y2="180" />
+                <circle cx="100" cy="100" r="10" fill="currentColor" />
+                <path d="M50 50 Q100 0 150 50" />
+                <path d="M50 150 Q100 200 150 150" />
+                <path d="M50 50 L150 150" />
+                <path d="M150 50 L50 150" />
+              </svg>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Pillar 1: AI-Powered Intelligence */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-neutral-200 text-center transform hover:scale-105 transition duration-300">
+              <div className="text-primary mb-4 text-4xl flex justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles">
+                  <path d="M9.9 10.8c.3.9.9 1.6 1.6 1.6H12l-1.7 2.1c-.3.4-.6.8-.8 1.3-.2.5-.3 1-.3 1.6 0 .6.1 1.1.3 1.6.2.5.5.9.8 1.3l1.7 2.1h-1.6c-.7 0-1.3-.7-1.6-1.6-.3-.9-.9-1.6-1.6-1.6H8l1.7-2.1c.3-.4.6-.8.8-1.3.2-.5.3-1 .3-1.6 0-.6-.1-1.1-.3-1.6-.2-.5-.5-.9-.8-1.3L8 8.7h1.6c.7 0 1.3.7 1.6 1.6z"/>
+                  <path d="M12 2v2"/>
+                  <path d="M12 20v2"/>
+                  <path d="M20 12h2"/>
+                  <path d="M2 12h2"/>
+                  <path d="m18.5 5.5-1.4 1.4"/>
+                  <path d="m6.5 17.5-1.4 1.4"/>
+                  <path d="m17.5 6.5 1.4-1.4"/>
+                  <path d="m6.5 6.5 1.4-1.4"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-primary">AI-Powered Intelligence</h3>
+              <p className="text-gray-700 text-sm">Leverage advanced AI to generate code, diagrams, and insights, accelerating your design process.</p>
+            </div>
+
+           
+
+            {/* Pillar 3: Robust System Design */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-neutral-200 text-center transform hover:scale-105 transition duration-300">
+              <div className="text-primary mb-4 text-4xl flex justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building-2">
+                  <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/>
+                  <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/>
+                  <path d="M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2"/>
+                  <path d="M10 6h4"/>
+                  <path d="M10 10h4"/>
+                  <path d="M10 14h4"/>
+                  <path d="M10 18h4"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-primary">Robust System Design</h3>
+              <p className="text-gray-700 text-sm">Craft resilient, scalable, and secure architectures with our comprehensive suite of diagramming and modeling tools.</p>
+            </div>
+
+            {/* Pillar 4: Visual Clarity */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-neutral-200 text-center transform hover:scale-105 transition duration-300">
+              <div className="text-primary mb-4 text-4xl flex justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard">
+                  <rect width="7" height="9" x="3" y="3" rx="1"/>
+                  <rect width="7" height="5" x="14" y="3" rx="1"/>
+                  <rect width="7" height="9" x="14" y="12" rx="1"/>
+                  <rect width="7" height="5" x="3" y="16" rx="1"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-primary">Visual Clarity</h3>
+              <p className="text-gray-700 text-sm">Transform abstract concepts into clear, understandable diagrams, making complex systems accessible to everyone.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* About Us Section */}
-      <section id="about" ref={(el) => (sectionRefs.current.about = el)} className="py-20 bg-neutral-100">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-primary-dark to-primary">
-            About ArchitectGood
-          </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            ArchitectGood is a cutting-edge platform designed to streamline the process of software architecture and design. We empower developers, architects, and teams to visualize complex systems with ease, generate code and diagrams using advanced AI, and collaborate seamlessly. Our mission is to bridge the gap between ideas and implementation, making design more accessible and efficient.
-          </p>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed mt-4">
-            Built with modern web technologies and powered by Google's Generative AI, ArchitectGood is constantly evolving to meet the demands of the fast-paced tech world. Join us in shaping the future of software design.
-          </p>
-        </div>
-      </section>
-
       {/* Contact Section */}
-      <section id="contact" ref={(el) => (sectionRefs.current.contact = el)} className="py-20 bg-white">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-primary-dark to-primary">
-            Get in Touch
+      <section id="contact" ref={(el) => (sectionRefs.current.contact = el)} className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-emerald-500 to-teal-700 opacity-80"></div> {/* Background gradient */}
+        <svg className="absolute inset-0 w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <pattern id="hex-pattern" width="20" height="17.32" patternUnits="userSpaceOnUse">
+              <path d="M10 0 L20 5 L20 15 L10 20 L0 15 L0 5 Z" fill="#fff" fill-opacity="0.1" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#hex-pattern)" />
+        </svg>
+        <div className="container mx-auto px-6 text-center relative z-10">
+          <h2 className="text-4xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-primary-dark to-primary flex items-center justify-center space-x-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail">
+              <rect width="20" height="16" x="2" y="4" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.9 1.9 0 0 1-2.06 0L2 7"/>
+            </svg>
+            <span>Get in Touch</span>
           </h2>
-          <p className="text-lg text-gray-700 mb-8">
+          <p className="text-lg text-white mb-8"> {/* Changed text color to white */}
             Have questions, feedback, or just want to say hello? We'd love to hear from you!
           </p>
           <div className="flex flex-col items-center space-y-4">
-            <a href="mailto:info@architectgood.com" className="text-primary hover:text-primary-dark transition-colors duration-300 text-xl font-medium">
+            <a href="mailto:info@architectgood.com" className="text-white hover:text-primary-light transition-colors duration-300 text-xl font-medium"> {/* Changed text color to white */}
               info@architectgood.com
             </a>
-            <p className="text-gray-600 text-lg">123 Design Street, Innovation City, Techland</p>
-            <p className="text-gray-600 text-lg">+1 (555) 123-4567</p>
+            <p className="text-white text-lg">Pune, Maharashtra, India</p> {/* Changed text color to white */}
+            <p className="text-white text-lg">+91 9881499363</p> {/* Changed text color to white */}
           </div>
         </div>
       </section>
 
       {/* Call to Action Section */}
       <section className="py-20 bg-neutral-100 text-center">
-        <h2 className="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-primary-dark to-primary">
-          Ready to Transform Your Workflow?
+        <h2 className="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-primary-dark to-primary flex items-center justify-center space-x-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket">
+            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74.5 5 2c1.26-1.5 5-2 5-2s-.5-3.74-2-5c1.5-1.26 2-5 2-5s-3.74-.5-5-2c-1.26 1.5-5 2-5 2s.5 3.74 2 5Z"/>
+            <path d="M9 18v3c0 .5-.5 1-1 1H6s-1 0-1-1v-3c0-.5.5-1 1-1h2c.5 0 1 .5 1 1Z"/>
+            <path d="M12 15h4c.5 0 1 .5 1 1v2c0 .5-.5 1-1 1h-4c-.5 0-1-.5-1-1v-2c0-.5.5-1 1-1Z"/>
+            <path d="M18 12h3c.5 0 1 .5 1 1v2c0 .5-.5 1-1 1h-3c-.5 0-1-.5-1-1v-2c0-.5.5-1 1-1Z"/>
+          </svg>
+          <span>Ready to Transform Your Workflow?</span>
         </h2>
         <button
           onClick={onLogin}
