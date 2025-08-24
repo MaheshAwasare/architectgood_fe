@@ -1,5 +1,6 @@
 import React from 'react';
-import { FileText, Puzzle, Code2, Sparkles, Layers, User, LogOut, BookCheck } from 'lucide-react';
+import { FileText, Puzzle, Code2, Sparkles, Layers, User, LogOut, BookCheck, Rss, Home, Star, Briefcase, Lightbulb, Mail, MessageSquare, GraduationCap, LogIn } from 'lucide-react'; // Import all necessary Lucide icons
+import { Link } from 'react-router-dom'; // Import Link for navigation
 
 interface NavBarProps {
   onLogin: () => void;
@@ -9,9 +10,9 @@ interface NavBarProps {
   user?: { name: string };
   onLogout?: () => void;
   onShowProfile?: () => void;
-  activeTab?: 'editor' | 'viewer' | 'advanced' | 'ai' | 'uml' | 'ai-uml';
-  setActiveTab?: (tab: 'editor' | 'viewer' | 'advanced' | 'ai' | 'uml' | 'ai-uml') => void;
-  setShowLandingPage: (show: boolean) => void;
+  // activeTab?: 'editor' | 'viewer' | 'advanced' | 'ai' | 'uml' | 'ai-uml'; // No longer needed in NavBar
+  // setActiveTab?: (tab: 'editor' | 'viewer' | 'advanced' | 'ai' | 'uml' | 'ai-uml') => void; // No longer needed in NavBar
+  // setShowLandingPage: (show: boolean) => void; // No longer directly setting landing page visibility
 }
 
 const NavBar: React.FC<NavBarProps> = ({
@@ -22,148 +23,88 @@ const NavBar: React.FC<NavBarProps> = ({
   user,
   onLogout,
   onShowProfile,
-  activeTab,
-  setActiveTab,
-  setShowLandingPage,
+  // activeTab, // Removed
+  // setActiveTab, // Removed
+  // setShowLandingPage, // Removed
 }) => {
-  const handleLogoClick = () => {
-    if (isLoggedIn) {
-      setActiveTab && setActiveTab('editor'); // Go to the first menu of logged-in user
-      setShowLandingPage(false); // Ensure landing page is hidden
-    } else {
-      setShowLandingPage(true); // Ensure landing page is shown
-      scrollToSection('home'); // Always scroll to home section on landing page
-    }
-  };
+  // Use Link for internal navigation where appropriate
+  // For scrolling to sections on landing page, still use scrollToSection
+  // For external links or full page reloads, window.location.href
 
   return (
     <nav className="bg-white p-4 shadow-lg fixed w-full z-10 top-0 transition-all duration-300 ease-in-out">
       <div className="container mx-auto flex justify-between items-center">
-        <button onClick={handleLogoClick} className="text-2xl font-extrabold text-primary tracking-wide" style={{ cursor: 'pointer' }}>
-          ArchitectGood
-        </button>
-        {!isLoggedIn ? (
-          <div className="space-x-6">
-            <button onClick={() => scrollToSection('home')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium">
-              Home
-            </button>
-            <button onClick={() => scrollToSection('features')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium">
-              Features
-            </button>
-            <button onClick={() => scrollToSection('services')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium">
-              Services
-            </button>
-            <button onClick={() => scrollToSection('how-it-works')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium">
-              How It Works
-            </button>
-            <button onClick={onViewBlog} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium">
-              Blog
-            </button>
-            <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium">
-              Contact
-            </button>
+        <Link to="/" className="flex items-center space-x-2 text-2xl font-extrabold text-primary tracking-wide focus:outline-none">
+          <img src="/ag_logo_new.png" alt="ArchitectGood Logo" className="h-10" /> {/* Increased size to h-10 */}
+          <span>ArchitectGood</span> {/* Added the text back */}
+        </Link>
+        <div className="space-x-6 flex items-center">
+          <button onClick={() => scrollToSection('home')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
+            <Home className="w-5 h-5" />
+            <span>Home</span>
+          </button>
+          <button onClick={() => scrollToSection('features')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
+            <Star className="w-5 h-5" />
+            <span>Features</span>
+          </button>
+          <button onClick={() => scrollToSection('services')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
+            <Briefcase className="w-5 h-5" />
+            <span>Services</span>
+          </button>
+          <button onClick={() => scrollToSection('how-it-works')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
+            <Lightbulb className="w-5 h-5" />
+            <span>How It Works</span>
+          </button>
+          {/* Blog button is removed from LandingPage, so it should be a direct link to /blog */}
+          <Link to="/blog" className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
+            <Rss className="w-5 h-5" />
+            <span>Blog</span>
+          </Link>
+          <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
+            <Mail className="w-5 h-5" />
+            <span>Contact</span>
+          </button>
+          <button onClick={() => scrollToSection('testimonials')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
+            <MessageSquare className="w-5 h-5" />
+            <span>Testimonials</span>
+          </button>
+          <Link to="/training" className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
+            <GraduationCap className="w-5 h-5" />
+            <span>Training</span>
+          </Link>
+
+          {isLoggedIn ? (
+            <>
+              {/* Dashboard/Tools button for logged-in users */}
+              <Link to="/dashboard" className="px-6 py-2 bg-blue-500 text-white font-semibold rounded-full shadow-lg hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl text-lg flex items-center space-x-1">
+                <Code2 className="w-5 h-5" />
+                <span>Tools</span>
+              </Link>
+              <button
+                onClick={onShowProfile}
+                className="px-6 py-2 bg-primary text-white font-semibold rounded-full shadow-lg hover:bg-primary-dark transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl text-lg flex items-center space-x-1"
+              >
+                <User className="w-5 h-5" />
+                <span>{user?.name || 'Profile'}</span>
+              </button>
+              <button
+                onClick={onLogout}
+                className="px-6 py-2 bg-red-500 text-white font-semibold rounded-full shadow-lg hover:bg-red-600 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl text-lg flex items-center space-x-1"
+              >
+                <LogOut className="w-5 h-5" />
+                <span>Logout</span>
+              </button>
+            </>
+          ) : (
             <button
               onClick={onLogin}
-              className="px-6 py-2 bg-primary text-white font-semibold rounded-full shadow-md hover:bg-primary-dark transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl text-lg"
+              className="px-6 py-2 bg-primary text-white font-semibold rounded-full shadow-lg hover:bg-primary-dark transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl text-lg flex items-center space-x-1"
             >
-              Login
+              <LogIn className="w-5 h-5" />
+              <span>Login</span>
             </button>
-          </div>
-        ) : (
-          <div className="flex items-center gap-3">
-            <div className="flex bg-gray-100 rounded-lg p-1 gap-1">
-              <button
-                onClick={() => setActiveTab && setActiveTab('editor')}
-                className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  activeTab === 'editor'
-                    ? 'bg-white text-primary shadow-sm'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
-              >
-                <FileText className="w-4 h-4" />
-                Diagram Editor
-              </button>
-              <button
-                onClick={() => setActiveTab && setActiveTab('viewer')}
-                className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  activeTab === 'viewer'
-                    ? 'bg-white text-primary shadow-sm'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
-              >
-                <Puzzle className="w-4 h-4" />
-                Plug & Play Viewer
-              </button>
-              <button
-                onClick={() => setActiveTab && setActiveTab('advanced')}
-                className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  activeTab === 'advanced'
-                    ? 'bg-white text-primary shadow-sm'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
-              >
-                <Code2 className="w-4 h-4" />
-                Advanced Editor
-              </button>
-              <button
-                onClick={() => setActiveTab && setActiveTab('ai')}
-                className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  activeTab === 'ai'
-                    ? 'bg-white text-primary shadow-sm'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
-              >
-                <Sparkles className="w-4 h-4" />
-                AI Mermaid Generator
-              </button>
-              <button
-                onClick={() => setActiveTab && setActiveTab('uml')}
-                className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  activeTab === 'uml'
-                    ? 'bg-white text-primary shadow-sm'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
-              >
-                <Layers className="w-4 h-4" />
-                UML Generator
-              </button>
-              <button
-                onClick={() => setActiveTab && setActiveTab('ai-uml')}
-                className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  activeTab === 'ai-uml'
-                    ? 'bg-white text-primary shadow-sm'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
-              >
-                <BookCheck className="w-4 h-4" />
-                AI UML Generator
-              </button>
-            </div>
-            
-            {/* User Menu */}
-            <div className="flex items-center gap-3">
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <span>Welcome, {user?.name}</span>
-              </div>
-              <div className="flex gap-2">
-                <button
-                  onClick={onShowProfile}
-                  className="flex items-center gap-2 px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
-                  title="Profile"
-                >
-                  <User className="w-4 h-4" />
-                </button>
-                <button
-                  onClick={onLogout}
-                  className="flex items-center gap-2 px-3 py-2 text-gray-600 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
-                  title="Sign Out"
-                >
-                  <LogOut className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </nav>
   );

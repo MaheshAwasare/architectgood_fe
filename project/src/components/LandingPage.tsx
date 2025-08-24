@@ -101,6 +101,15 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
               </svg>
               <span>Testimonials</span>
             </button>
+            {/* New Training Button */}
+            <button onClick={() => window.location.href = '/training'} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap">
+                <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.2 4.6a1 1 0 0 0-.4 0L2.6 9.084a1 1 0 0 0-.02 1.838l8.59 4.427a1 1 0 0 0 .82 0Z"/>
+                <path d="M12 15.5v6"/>
+                <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.2 4.6a1 1 0 0 0-.4 0L2.6 9.084a1 1 0 0 0-.02 1.838l8.59 4.427a1 1 0 0 0 .82 0Z" transform="translate(0 2)"/>
+              </svg>
+              <span>Training</span>
+            </button>
             <button
               onClick={onLogin}
               className="px-6 py-2 bg-primary text-white font-semibold rounded-full shadow-lg hover:bg-primary-dark transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl text-lg flex items-center space-x-1"
@@ -281,65 +290,107 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section id="testimonials" ref={(el) => (sectionRefs.current.testimonials = el)} className="py-20 bg-neutral-100">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-primary-dark to-primary flex items-center justify-center space-x-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote-left">
-              <path d="M10.3 2.6a1 1 0 0 1 1.7.7L13 6.5a1 1 0 0 1-.7 1.7l-2.9-.7a1 1 0 0 1-.7-1.7l.7-2.9a1 1 0 0 1 1.7-.7z"/>
-              <path d="M10.3 13.6a1 1 0 0 1 1.7.7L13 17.5a1 1 0 0 1-.7 1.7l-2.9-.7a1 1 0 0 1-.7-1.7l.7-2.9a1 1 0 0 1 1.7-.7z"/>
+        {/* About Us Section */}
+      <section id="about" ref={(el) => (sectionRefs.current.about = el)} className="relative py-20 overflow-hidden mb-20">
+        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-primary-dark to-primary-light opacity-80"></div> {/* Background gradient */}
+        <svg className="absolute inset-0 w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <pattern id="triangle-pattern" width="10" height="10" patternUnits="userSpaceOnUse">
+              <path d="M5 0 L10 10 L0 10 Z" fill="#fff" fill-opacity="0.1" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#triangle-pattern)" />
+        </svg>
+        <div className="container mx-auto px-6 text-center relative z-10">
+          <h2 className="text-4xl font-bold mb-12 text-white flex items-center justify-center space-x-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 16v-4"/>
+              <path d="M12 8h.01"/>
             </svg>
-            <span>What Users Say</span>
+            <span>Our Vision: Innovating Software Architecture with AI</span>
           </h2>
 
-          {/* New Illustrative SVG Diagram for Testimonials */}
-          <div className="flex justify-center mb-16">
-            <svg width="600" height="200" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
-              {/* Speech Bubble 1 */}
-              <rect x="20" y="20" width="160" height="80" rx="20" ry="20" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
-              <circle cx="60" cy="110" r="10" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
-              <line x1="60" y1="100" x2="80" y2="120" stroke="#3b82f6" stroke-width="2"/>
-              <text x="100" y="70" font-family="Arial" font-size="24" fill="#333" text-anchor="middle">Great!</text>
-
-              {/* Speech Bubble 2 */}
-              <rect x="220" y="60" width="160" height="80" rx="20" ry="20" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
-              <circle cx="260" cy="150" r="10" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
-              <line x1="260" y1="140" x2="280" y2="160" stroke="#3b82f6" stroke-width="2"/>
-              <text x="300" y="110" font-family="Arial" font-size="24" fill="#333" text-anchor="middle">Awesome!</text>
-
-              {/* Speech Bubble 3 */}
-              <rect x="420" y="20" width="160" height="80" rx="20" ry="20" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
-              <circle cx="460" cy="110" r="10" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
-              <line x1="460" y1="100" x2="480" y2="120" stroke="#3b82f6" stroke-width="2"/>
-              <text x="500" y="70" font-family="Arial" font-size="24" fill="#333" text-anchor="middle">Fantastic!</text>
-            </svg>
+          <div className="flex flex-col md:flex-row items-center gap-12 mb-16">
+            <div className="md:w-1/2 text-left">
+              <p className="text-lg text-white leading-relaxed mb-6">
+                At ArchitectGood, we believe in empowering developers and architects to build the future. Our platform seamlessly integrates cutting-edge AI with intuitive design tools, transforming complex architectural challenges into streamlined, collaborative workflows. We're dedicated to fostering innovation, ensuring scalability, and simplifying the art of software design.
+              </p>
+              <p className="text-lg text-white leading-relaxed">
+                Join us in redefining how software is conceptualized, designed, and brought to life.
+              </p>
+            </div>
+            <div className="md:w-1/2 flex justify-center items-center">
+              {/* Placeholder for a more complex SVG illustration */}
+              <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-white opacity-70">
+                <circle cx="100" cy="100" r="80" stroke-dasharray="5 5" />
+                <line x1="20" y1="100" x2="180" y2="100" />
+                <line x1="100" y1="20" x2="100" y2="180" />
+                <circle cx="100" cy="100" r="10" fill="currentColor" />
+                <path d="M50 50 Q100 0 150 50" />
+                <path d="M50 150 Q100 200 150 150" />
+                <path d="M50 50 L150 150" />
+                <path d="M150 50 L50 150" />
+              </svg>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Testimonial 1 */}
-            <div className="bg-neutral-50 p-8 rounded-xl shadow-lg border border-neutral-200 flex flex-col items-center text-center">
-              <p className="text-lg text-gray-700 italic mb-6">
-                "ArchitectGood transformed our development process. Their AI tools are incredibly powerful, and their consulting services are top-notch. Highly recommended!"
-              </p>
-              <p className="font-semibold text-primary-dark">— Mahesh A (Architect)</p>
+            {/* Pillar 1: AI-Powered Intelligence */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-neutral-200 text-center transform hover:scale-105 transition duration-300">
+              <div className="text-primary mb-4 text-4xl flex justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles">
+                  <path d="M9.9 10.8c.3.9.9 1.6 1.6 1.6H12l-1.7 2.1c-.3.4-.6.8-.8 1.3-.2.5-.3 1-.3 1.6 0 .6.1 1.1.3 1.6.2.5.5.9.8 1.3l1.7 2.1h-1.6c-.7 0-1.3-.7-1.6-1.6-.3-.9-.9-1.6-1.6-1.6H8l1.7-2.1c.3-.4.6-.8.8-1.3.2-.5.3-1 .3-1.6 0-.6-.1-1.1-.3-1.6-.2-.5-.5-.9-.8-1.3L8 8.7h1.6c.7 0 1.3.7 1.6 1.6z"/>
+                  <path d="M12 2v2"/>
+                  <path d="M12 20v2"/>
+                  <path d="M20 12h2"/>
+                  <path d="M2 12h2"/>
+                  <path d="m18.5 5.5-1.4 1.4"/>
+                  <path d="m6.5 17.5-1.4 1.4"/>
+                  <path d="m17.5 6.5 1.4-1.4"/>
+                  <path d="m6.5 6.5 1.4-1.4"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-primary">AI-Powered Intelligence</h3>
+              <p className="text-gray-700 text-sm">Leverage advanced AI to generate code, diagrams, and insights, accelerating your design process.</p>
             </div>
-            {/* Testimonial 2 */}
-            <div className="bg-neutral-50 p-8 rounded-xl shadow-lg border border-neutral-200 flex flex-col items-center text-center">
-              <p className="text-lg text-gray-700 italic mb-6">
-                "The diagramming tools are a game-changer. We can now visualize complex systems with ease, and the AI assistance saves us countless hours."
-              </p>
-              <p className="font-semibold text-primary-dark">— SP, Lead Architect at Innovate Corp</p>
+
+           
+
+            {/* Pillar 3: Robust System Design */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-neutral-200 text-center transform hover:scale-105 transition duration-300">
+              <div className="text-primary mb-4 text-4xl flex justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building-2">
+                  <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/>
+                  <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/>
+                  <path d="M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2"/>
+                  <path d="M10 6h4"/>
+                  <path d="M10 10h4"/>
+                  <path d="M10 14h4"/>
+                  <path d="M10 18h4"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-primary">Robust System Design</h3>
+              <p className="text-gray-700 text-sm">Craft resilient, scalable, and secure architectures with our comprehensive suite of diagramming and modeling tools.</p>
             </div>
-            {/* Testimonial 3 */}
-            <div className="bg-neutral-50 p-8 rounded-xl shadow-lg border border-neutral-200 flex flex-col items-center text-center">
-              <p className="text-lg text-gray-700 italic mb-6">
-                "Their team's expertise in software architecture is unparalleled. They helped us navigate critical design decisions and set us up for long-term success."
-              </p>
-              <p className="font-semibold text-primary-dark">— NV, Architect at Avaloq</p>
+
+            {/* Pillar 4: Visual Clarity */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-neutral-200 text-center transform hover:scale-105 transition duration-300">
+              <div className="text-primary mb-4 text-4xl flex justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard">
+                  <rect width="7" height="9" x="3" y="3" rx="1"/>
+                  <rect width="7" height="5" x="14" y="3" rx="1"/>
+                  <rect width="7" height="9" x="14" y="12" rx="1"/>
+                  <rect width="7" height="5" x="3" y="16" rx="1"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-primary">Visual Clarity</h3>
+              <p className="text-gray-700 text-sm">Transform abstract concepts into clear, understandable diagrams, making complex systems accessible to everyone.</p>
             </div>
           </div>
         </div>
       </section>
+     
 
       {/* How It Works: Mermaid & UML Section */}
       <section id="how-it-works" ref={(el) => (sectionRefs.current.howItWorks = el)} className="relative py-20 overflow-hidden">
@@ -465,102 +516,62 @@ User "1" -- "*" Product : owns
 
       
 
-      {/* About Us Section */}
-      <section id="about" ref={(el) => (sectionRefs.current.about = el)} className="relative py-20 overflow-hidden mb-20">
-        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-primary-dark to-primary-light opacity-80"></div> {/* Background gradient */}
-        <svg className="absolute inset-0 w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <pattern id="triangle-pattern" width="10" height="10" patternUnits="userSpaceOnUse">
-              <path d="M5 0 L10 10 L0 10 Z" fill="#fff" fill-opacity="0.1" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#triangle-pattern)" />
-        </svg>
-        <div className="container mx-auto px-6 text-center relative z-10">
-          <h2 className="text-4xl font-bold mb-12 text-white flex items-center justify-center space-x-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 16v-4"/>
-              <path d="M12 8h.01"/>
+    
+
+       <section id="testimonials" ref={(el) => (sectionRefs.current.testimonials = el)} className="py-20 bg-neutral-100">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-primary-dark to-primary flex items-center justify-center space-x-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote-left">
+              <path d="M10.3 2.6a1 1 0 0 1 1.7.7L13 6.5a1 1 0 0 1-.7 1.7l-2.9-.7a1 1 0 0 1-.7-1.7l.7-2.9a1 1 0 0 1 1.7-.7z"/>
+              <path d="M10.3 13.6a1 1 0 0 1 1.7.7L13 17.5a1 1 0 0 1-.7 1.7l-2.9-.7a1 1 0 0 1-.7-1.7l.7-2.9a1 1 0 0 1 1.7-.7z"/>
             </svg>
-            <span>Our Vision: Innovating Software Architecture with AI</span>
+            <span>What Users Say</span>
           </h2>
 
-          <div className="flex flex-col md:flex-row items-center gap-12 mb-16">
-            <div className="md:w-1/2 text-left">
-              <p className="text-lg text-white leading-relaxed mb-6">
-                At ArchitectGood, we believe in empowering developers and architects to build the future. Our platform seamlessly integrates cutting-edge AI with intuitive design tools, transforming complex architectural challenges into streamlined, collaborative workflows. We're dedicated to fostering innovation, ensuring scalability, and simplifying the art of software design.
-              </p>
-              <p className="text-lg text-white leading-relaxed">
-                Join us in redefining how software is conceptualized, designed, and brought to life.
-              </p>
-            </div>
-            <div className="md:w-1/2 flex justify-center items-center">
-              {/* Placeholder for a more complex SVG illustration */}
-              <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-white opacity-70">
-                <circle cx="100" cy="100" r="80" stroke-dasharray="5 5" />
-                <line x1="20" y1="100" x2="180" y2="100" />
-                <line x1="100" y1="20" x2="100" y2="180" />
-                <circle cx="100" cy="100" r="10" fill="currentColor" />
-                <path d="M50 50 Q100 0 150 50" />
-                <path d="M50 150 Q100 200 150 150" />
-                <path d="M50 50 L150 150" />
-                <path d="M150 50 L50 150" />
-              </svg>
-            </div>
+          {/* New Illustrative SVG Diagram for Testimonials */}
+          <div className="flex justify-center mb-16">
+            <svg width="600" height="200" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+              {/* Speech Bubble 1 */}
+              <rect x="20" y="20" width="160" height="80" rx="20" ry="20" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
+              <circle cx="60" cy="110" r="10" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
+              <line x1="60" y1="100" x2="80" y2="120" stroke="#3b82f6" stroke-width="2"/>
+              <text x="100" y="70" font-family="Arial" font-size="24" fill="#333" text-anchor="middle">Great!</text>
+
+              {/* Speech Bubble 2 */}
+              <rect x="220" y="60" width="160" height="80" rx="20" ry="20" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
+              <circle cx="260" cy="150" r="10" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
+              <line x1="260" y1="140" x2="280" y2="160" stroke="#3b82f6" stroke-width="2"/>
+              <text x="300" y="110" font-family="Arial" font-size="24" fill="#333" text-anchor="middle">Awesome!</text>
+
+              {/* Speech Bubble 3 */}
+              <rect x="420" y="20" width="160" height="80" rx="20" ry="20" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
+              <circle cx="460" cy="110" r="10" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
+              <line x1="460" y1="100" x2="480" y2="120" stroke="#3b82f6" stroke-width="2"/>
+              <text x="500" y="70" font-family="Arial" font-size="24" fill="#333" text-anchor="middle">Fantastic!</text>
+            </svg>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Pillar 1: AI-Powered Intelligence */}
-            <div className="bg-white p-6 rounded-xl shadow-lg border border-neutral-200 text-center transform hover:scale-105 transition duration-300">
-              <div className="text-primary mb-4 text-4xl flex justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles">
-                  <path d="M9.9 10.8c.3.9.9 1.6 1.6 1.6H12l-1.7 2.1c-.3.4-.6.8-.8 1.3-.2.5-.3 1-.3 1.6 0 .6.1 1.1.3 1.6.2.5.5.9.8 1.3l1.7 2.1h-1.6c-.7 0-1.3-.7-1.6-1.6-.3-.9-.9-1.6-1.6-1.6H8l1.7-2.1c.3-.4.6-.8.8-1.3.2-.5.3-1 .3-1.6 0-.6-.1-1.1-.3-1.6-.2-.5-.5-.9-.8-1.3L8 8.7h1.6c.7 0 1.3.7 1.6 1.6z"/>
-                  <path d="M12 2v2"/>
-                  <path d="M12 20v2"/>
-                  <path d="M20 12h2"/>
-                  <path d="M2 12h2"/>
-                  <path d="m18.5 5.5-1.4 1.4"/>
-                  <path d="m6.5 17.5-1.4 1.4"/>
-                  <path d="m17.5 6.5 1.4-1.4"/>
-                  <path d="m6.5 6.5 1.4-1.4"/>
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-primary">AI-Powered Intelligence</h3>
-              <p className="text-gray-700 text-sm">Leverage advanced AI to generate code, diagrams, and insights, accelerating your design process.</p>
+            {/* Testimonial 1 */}
+            <div className="bg-neutral-50 p-8 rounded-xl shadow-lg border border-neutral-200 flex flex-col items-center text-center">
+              <p className="text-lg text-gray-700 italic mb-6">
+                "ArchitectGood transformed our development process. Their AI tools are incredibly powerful, and their consulting services are top-notch. Highly recommended!"
+              </p>
+              <p className="font-semibold text-primary-dark">— Mahesh A (Architect)</p>
             </div>
-
-           
-
-            {/* Pillar 3: Robust System Design */}
-            <div className="bg-white p-6 rounded-xl shadow-lg border border-neutral-200 text-center transform hover:scale-105 transition duration-300">
-              <div className="text-primary mb-4 text-4xl flex justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building-2">
-                  <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/>
-                  <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/>
-                  <path d="M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2"/>
-                  <path d="M10 6h4"/>
-                  <path d="M10 10h4"/>
-                  <path d="M10 14h4"/>
-                  <path d="M10 18h4"/>
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-primary">Robust System Design</h3>
-              <p className="text-gray-700 text-sm">Craft resilient, scalable, and secure architectures with our comprehensive suite of diagramming and modeling tools.</p>
+            {/* Testimonial 2 */}
+            <div className="bg-neutral-50 p-8 rounded-xl shadow-lg border border-neutral-200 flex flex-col items-center text-center">
+              <p className="text-lg text-gray-700 italic mb-6">
+                "The diagramming tools are a game-changer. We can now visualize complex systems with ease, and the AI assistance saves us countless hours."
+              </p>
+              <p className="font-semibold text-primary-dark">— SP, Lead Architect at Innovate Corp</p>
             </div>
-
-            {/* Pillar 4: Visual Clarity */}
-            <div className="bg-white p-6 rounded-xl shadow-lg border border-neutral-200 text-center transform hover:scale-105 transition duration-300">
-              <div className="text-primary mb-4 text-4xl flex justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard">
-                  <rect width="7" height="9" x="3" y="3" rx="1"/>
-                  <rect width="7" height="5" x="14" y="3" rx="1"/>
-                  <rect width="7" height="9" x="14" y="12" rx="1"/>
-                  <rect width="7" height="5" x="3" y="16" rx="1"/>
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-primary">Visual Clarity</h3>
-              <p className="text-gray-700 text-sm">Transform abstract concepts into clear, understandable diagrams, making complex systems accessible to everyone.</p>
+            {/* Testimonial 3 */}
+            <div className="bg-neutral-50 p-8 rounded-xl shadow-lg border border-neutral-200 flex flex-col items-center text-center">
+              <p className="text-lg text-gray-700 italic mb-6">
+                "Their team's expertise in software architecture is unparalleled. They helped us navigate critical design decisions and set us up for long-term success."
+              </p>
+              <p className="font-semibold text-primary-dark">— NV, Architect at Avaloq</p>
             </div>
           </div>
         </div>
