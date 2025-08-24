@@ -92,8 +92,13 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
       </nav>
 
       {/* Hero Section (Home) */}
-      <section id="home" className="relative flex items-center justify-center h-screen bg-gradient-to-br from-primary-light to-primary pt-16 overflow-hidden">
-        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23000000" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 0v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM12 34v-4h-2v4H6v2h4v4h2v-4h4v-2h-4zm0 0v-4h-2v4H6v2h4v4h2v-4h4v-2h-4z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}></div>
+      <section id="home" className="relative flex items-center justify-center h-screen pt-16 overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1550439062-609e1d87538e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Software Architecture and AI"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black opacity-50"></div> {/* Overlay for text readability */}
         <div className="text-center px-4 relative z-10">
           <button
             onClick={() => scrollToSection('home')}
@@ -101,7 +106,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
           >
             ArchitectGood
           </button>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-700 animate-fade-in-up delay-200">
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-white animate-fade-in-up delay-200">
             Your AI-Powered Partner for Software Architecture, Diagramming, and Consulting.
           </p>
           <button
