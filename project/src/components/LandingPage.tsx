@@ -56,9 +56,9 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
       {/* Navigation Bar */}
       <nav className="bg-white p-4 shadow-lg fixed w-full z-10 top-0 transition-all duration-300 ease-in-out">
         <div className="container mx-auto flex justify-between items-center">
-          <div className="text-2xl font-extrabold text-primary tracking-wide">
+          <button onClick={() => scrollToSection('home')} className="text-2xl font-extrabold text-primary tracking-wide focus:outline-none">
             ArchitectGood
-          </div>
+          </button>
           <div className="space-x-6 flex items-center">
             <button onClick={() => scrollToSection('home')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-home">
