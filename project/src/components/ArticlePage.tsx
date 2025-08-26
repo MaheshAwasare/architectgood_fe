@@ -1,12 +1,13 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import { Article, blogService } from '../utils/blogService';
 
 interface ArticlePageProps {
-  articleId: string;
   onBack: () => void;
 }
 
-const ArticlePage: React.FC<ArticlePageProps> = ({ articleId, onBack }) => {
+const ArticlePage: React.FC<ArticlePageProps> = ({ onBack }) => {
+  const { articleId } = useParams<{ articleId: string }>();
   const article = blogService.getArticleById(articleId);
 
   if (!article) {
