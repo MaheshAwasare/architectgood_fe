@@ -37,22 +37,26 @@ const NavBar: React.FC<NavBarProps> = ({
 
   return (
     <nav className="bg-white shadow-lg fixed w-full z-50 top-0">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
         <div className="flex justify-between items-center h-16">
+         
           {/* Logo */}
-          <Link 
-            to="/" 
-            className="flex items-center space-x-2 text-2xl font-extrabold text-primary tracking-wide focus:outline-none"
-            onClick={closeMobileMenu}
-          >
-            <img src="/ag_logo_new.png" alt="ArchitectGood Logo" className="h-10" />
-            <span>ArchitectGood</span>
-          </Link>
+          
+         
+        
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
             {!isLoggedIn ? (
               <>
+               <Link 
+            to="/" 
+            className="flex items-center space-x-2 text-2xl font-extrabold text-primary tracking-wide focus:outline-none"
+            onClick={closeMobileMenu}
+          >
+            <img src="/ag_logo_new.png" alt="ArchitectGood" className="h-8" />
+                      <span>ArchitectGood</span>
+          </Link>
                 {/* Landing Page Navigation */}
                 <button 
                   onClick={() => scrollToSection('home')} 
@@ -100,6 +104,15 @@ const NavBar: React.FC<NavBarProps> = ({
             ) : (
               <>
                 {/* Tools for Logged In Users */}
+                 <Link 
+                 className="font-extrabold text-primary"
+            to="/" 
+            
+            onClick={closeMobileMenu}
+          >
+             
+                      <span class="font-extrabold text-primary">ArchitectGood</span>
+          </Link>
                 <Link 
                   to="/dashboard" 
                   onClick={() => setActiveTab('editor')} 
@@ -138,7 +151,7 @@ const NavBar: React.FC<NavBarProps> = ({
                   }`}
                 >
                   <Sparkles className="w-4 h-4" />
-                  AI Mermaid Generator
+                  AI Mermaid Diagram Generator
                 </Link>
                 <Link 
                   to="/dashboard" 
@@ -148,7 +161,7 @@ const NavBar: React.FC<NavBarProps> = ({
                   }`}
                 >
                   <Layers className="w-4 h-4" />
-                  UML Generator
+                  UML Renderer
                 </Link>
                 <Link 
                   to="/dashboard" 
@@ -158,7 +171,7 @@ const NavBar: React.FC<NavBarProps> = ({
                   }`}
                 >
                   <BookCheck className="w-4 h-4" />
-                  AI UML Generator
+                  AI UML Diagram Generator
                 </Link>
               </>
             )}
