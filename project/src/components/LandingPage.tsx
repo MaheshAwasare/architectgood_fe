@@ -53,77 +53,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
 
   return (
     <div className="min-h-screen bg-neutral-50 text-gray-900 font-sans overflow-x-hidden">
-      {/* Navigation Bar */}
-      <nav className="bg-white p-4 shadow-lg fixed w-full z-10 top-0 transition-all duration-300 ease-in-out">
-        <div className="container mx-auto flex justify-between items-center">
-          <button onClick={() => scrollToSection('home')} className="text-2xl font-extrabold text-primary tracking-wide focus:outline-none">
-            ArchitectGood
-          </button>
-          <div className="space-x-6 flex items-center">
-            <button onClick={() => scrollToSection('home')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-home">
-                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                <polyline points="9 22 9 12 15 12 15 22"/>
-              </svg>
-              <span>Home</span>
-            </button>
-            <button onClick={() => scrollToSection('features')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-              </svg>
-              <span>Features</span>
-            </button>
-            <button onClick={() => scrollToSection('services')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase">
-                <rect width="20" height="14" x="2" y="7" rx="2" ry="2"/>
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-              </svg>
-              <span>Services</span>
-            </button>
-            <button onClick={() => scrollToSection('how-it-works')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb">
-                <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 6c0 1.8.7 3.3 1.5 4.5 1 .8 1.5 2.1 1.5 3.5L12 22l3-8Z"/>
-                <path d="M2 17h2c1.5 0 3-.5 4.5-1.3m8.5 1.3h2c1.5 0 3-.5 4.5-1.3"/>
-              </svg>
-              <span>How It Works</span>
-            </button>
-            
-            <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail">
-                <rect width="20" height="16" x="2" y="4" rx="2"/>
-                <path d="m22 7-8.97 5.7a1.9 1.9 0 0 1-2.06 0L2 7"/>
-              </svg>
-              <span>Contact</span>
-            </button>
-            <button onClick={() => scrollToSection('testimonials')} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-              </svg>
-              <span>Testimonials</span>
-            </button>
-            {/* New Training Button */}
-            <button onClick={() => window.location.href = '/training'} className="text-gray-600 hover:text-primary transition-colors duration-300 text-lg font-medium flex items-center space-x-1">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap">
-                <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.2 4.6a1 1 0 0 0-.4 0L2.6 9.084a1 1 0 0 0-.02 1.838l8.59 4.427a1 1 0 0 0 .82 0Z"/>
-                <path d="M12 15.5v6"/>
-                <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.2 4.6a1 1 0 0 0-.4 0L2.6 9.084a1 1 0 0 0-.02 1.838l8.59 4.427a1 1 0 0 0 .82 0Z" transform="translate(0 2)"/>
-              </svg>
-              <span>Training</span>
-            </button>
-            <button
-              onClick={onLogin}
-              className="px-6 py-2 bg-primary text-white font-semibold rounded-full shadow-lg hover:bg-primary-dark transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl text-lg flex items-center space-x-1"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in">
-                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
-                <polyline points="10 17 15 12 10 7"/>
-                <line x1="15" x2="3" y1="12" y2="12"/>
-              </svg>
-              <span>Login</span>
-            </button>
-          </div>
-        </div>
-      </nav>
+      
 
       {/* Hero Section (Home) */}
       <section id="home" className="relative flex items-center justify-center h-screen pt-16 overflow-hidden">
@@ -131,7 +61,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
         <svg className="absolute inset-0 w-full h-full opacity-30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
           <defs>
             <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-              <path d="M 10 0 L 0 0 L 0 10" fill="none" stroke="white" stroke-width="0.2" />
+              <path d="M 10 0 L 0 0 L 0 10" fill="none" stroke="white" strokeWidth="0.2" />
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#grid)" />
@@ -165,7 +95,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
             {/* Feature 1: AI-Powered Generation */}
             <div className="bg-neutral-50 p-8 rounded-xl shadow-lg border border-neutral-200 transform hover:scale-105 transition duration-300 group">
               <div className="text-primary mb-4 text-5xl flex justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-sparkles">
                   <path d="M9.9 10.8c.3.9.9 1.6 1.6 1.6H12l-1.7 2.1c-.3.4-.6.8-.8 1.3-.2.5-.3 1-.3 1.6 0 .6.1 1.1.3 1.6.2.5.5.9.8 1.3l1.7 2.1h-1.6c-.7 0-1.3-.7-1.6-1.6-.3-.9-.9-1.6-1.6-1.6H8l1.7-2.1c.3-.4.6-.8.8-1.3.2-.5.3-1 .3-1.6 0-.6-.1-1.1-.3-1.6-.2-.5-.5-.9-.8-1.3L8 8.7h1.6c.7 0 1.3.7 1.6 1.6z"/>
                   <path d="M12 2v2"/>
                   <path d="M12 20v2"/>
@@ -185,7 +115,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
             {/* Feature 2: Advanced Diagramming */}
             <div className="bg-neutral-50 p-8 rounded-xl shadow-lg border border-neutral-200 transform hover:scale-105 transition duration-300 group">
               <div className="text-primary mb-4 text-5xl flex justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-layout-dashboard">
                   <rect width="7" height="9" x="3" y="3" rx="1"/>
                   <rect width="7" height="5" x="14" y="3" rx="1"/>
                   <rect width="7" height="9" x="14" y="12" rx="1"/>
@@ -200,7 +130,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
             {/* Feature 3: Integrated Code Editor */}
             <div className="bg-neutral-50 p-8 rounded-xl shadow-lg border border-neutral-200 transform hover:scale-105 transition duration-300 group">
               <div className="text-primary mb-4 text-5xl flex justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-code">
                   <polyline points="16 18 22 12 16 6"/>
                   <polyline points="8 6 2 12 8 18"/>
                 </svg>
@@ -220,7 +150,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
         <svg className="absolute inset-0 w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
           <defs>
             <pattern id="hex-pattern" width="20" height="17.32" patternUnits="userSpaceOnUse">
-              <path d="M10 0 L20 5 L20 15 L10 20 L0 15 L0 5 Z" fill="#fff" fill-opacity="0.1" />
+              <path d="M10 0 L20 5 L20 15 L10 20 L0 15 L0 5 Z" fill="#fff" fillOpacity="0.1" />
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#hex-pattern)" />
@@ -234,7 +164,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
             <div className="flex flex-col md:flex-row items-center bg-neutral-50 p-10 rounded-3xl shadow-2xl border border-neutral-200 transform transition duration-500 hover:scale-[1.02] hover:shadow-3xl group">
               <div className="md:w-1/3 flex justify-center mb-8 md:mb-0 md:pr-8">
                 <div className="text-primary text-8xl transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-building-2">
                     <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/>
                     <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/>
                     <path d="M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2"/>
@@ -264,7 +194,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
             <div className="flex flex-col md:flex-row items-center bg-neutral-50 p-10 rounded-3xl shadow-2xl border border-neutral-200 transform transition duration-500 hover:scale-[1.02] hover:shadow-3xl group">
               <div className="md:w-1/3 flex justify-center mb-8 md:mb-0 md:pr-8">
                 <div className="text-primary text-8xl transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-users">
                     <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
                     <circle cx="9" cy="7" r="4"/>
                     <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
@@ -296,14 +226,14 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
         <svg className="absolute inset-0 w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
           <defs>
             <pattern id="triangle-pattern" width="10" height="10" patternUnits="userSpaceOnUse">
-              <path d="M5 0 L10 10 L0 10 Z" fill="#fff" fill-opacity="0.1" />
+              <path d="M5 0 L10 10 L0 10 Z" fill="#fff" fillOpacity="0.1" />
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#triangle-pattern)" />
         </svg>
         <div className="container mx-auto px-6 text-center relative z-10">
           <h2 className="text-4xl font-bold mb-12 text-white flex items-center justify-center space-x-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-info">
               <circle cx="12" cy="12" r="10"/>
               <path d="M12 16v-4"/>
               <path d="M12 8h.01"/>
@@ -322,8 +252,8 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
             </div>
             <div className="md:w-1/2 flex justify-center items-center">
               {/* Placeholder for a more complex SVG illustration */}
-              <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-white opacity-70">
-                <circle cx="100" cy="100" r="80" stroke-dasharray="5 5" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 200 200" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="text-white opacity-70">
+                <circle cx="100" cy="100" r="80" strokeDasharray="5 5" />
                 <line x1="20" y1="100" x2="180" y2="100" />
                 <line x1="100" y1="20" x2="100" y2="180" />
                 <circle cx="100" cy="100" r="10" fill="currentColor" />
@@ -339,7 +269,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
             {/* Pillar 1: AI-Powered Intelligence */}
             <div className="bg-white p-6 rounded-xl shadow-lg border border-neutral-200 text-center transform hover:scale-105 transition duration-300">
               <div className="text-primary mb-4 text-4xl flex justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-sparkles">
                   <path d="M9.9 10.8c.3.9.9 1.6 1.6 1.6H12l-1.7 2.1c-.3.4-.6.8-.8 1.3-.2.5-.3 1-.3 1.6 0 .6.1 1.1.3 1.6.2.5.5.9.8 1.3l1.7 2.1h-1.6c-.7 0-1.3-.7-1.6-1.6-.3-.9-.9-1.6-1.6-1.6H8l1.7-2.1c.3-.4.6-.8.8-1.3.2-.5.3-1 .3-1.6 0-.6-.1-1.1-.3-1.6-.2-.5-.5-.9-.8-1.3L8 8.7h1.6c.7 0 1.3.7 1.6 1.6z"/>
                   <path d="M12 2v2"/>
                   <path d="M12 20v2"/>
@@ -360,7 +290,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
             {/* Pillar 3: Robust System Design */}
             <div className="bg-white p-6 rounded-xl shadow-lg border border-neutral-200 text-center transform hover:scale-105 transition duration-300">
               <div className="text-primary mb-4 text-4xl flex justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-building-2">
                   <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/>
                   <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/>
                   <path d="M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2"/>
@@ -377,7 +307,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
             {/* Pillar 4: Visual Clarity */}
             <div className="bg-white p-6 rounded-xl shadow-lg border border-neutral-200 text-center transform hover:scale-105 transition duration-300">
               <div className="text-primary mb-4 text-4xl flex justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-layout-dashboard">
                   <rect width="7" height="9" x="3" y="3" rx="1"/>
                   <rect width="7" height="5" x="14" y="3" rx="1"/>
                   <rect width="7" height="9" x="14" y="12" rx="1"/>
@@ -405,7 +335,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
         </svg>
         <div className="container mx-auto px-6 relative z-10"> {/* Added relative z-10 to content */}
           <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-primary-dark to-primary flex items-center justify-center space-x-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-git-branch-plus">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-git-branch-plus">
               <path d="M6 3v12"/>
               <path d="M18 9v12"/>
               <path d="M12 6v.01"/>
@@ -421,23 +351,23 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onViewBlog }) => {
           <div className="flex justify-center mb-16">
             <svg width="600" height="225" viewBox="0 0 600 225" xmlns="http://www.w3.org/2000/svg">
               {/* Text Input */}
-              <rect x="30" y="75" width="150" height="75" rx="15" ry="15" fill="#fff" stroke="#3b82f6" stroke-width="3"/>
-              <text x="105" y="120" font-family="Arial" font-size="24" fill="#333" text-anchor="middle">Text Input</text>
+              <rect x="30" y="75" width="150" height="75" rx="15" ry="15" fill="#fff" stroke="#3b82f6" strokeWidth="3"/>
+              <text x="105" y="120" fontFamily="Arial" fontSize="24" fill="#333" textAnchor="middle">Text Input</text>
 
               {/* Arrow 1 */}
-              <line x1="180" y1="112.5" x2="270" y2="112.5" stroke="#3b82f6" stroke-width="3" marker-end="url(#arrowhead)"/>
+              <line x1="180" y1="112.5" x2="270" y2="112.5" stroke="#3b82f6" strokeWidth="3" markerEnd="url(#arrowhead)"/>
 
               {/* Process */}
-              <circle cx="300" cy="112.5" r="45" fill="#fff" stroke="#3b82f6" stroke-width="3"/>
-              <text x="300" y="120" font-family="Arial" font-size="24" fill="#333" text-anchor="middle">Process</text>
+              <circle cx="300" cy="112.5" r="45" fill="#fff" stroke="#3b82f6" strokeWidth="3"/>
+              <text x="300" y="120" fontFamily="Arial" fontSize="24" fill="#333" textAnchor="middle">Process</text>
 
               {/* Arrow 2 */}
-              <line x1="345" y1="112.5" x2="435" y2="112.5" stroke="#3b82f6" stroke-width="3" marker-end="url(#arrowhead)"/>
+              <line x1="345" y1="112.5" x2="435" y2="112.5" stroke="#3b82f6" strokeWidth="3" markerEnd="url(#arrowhead)"/>
 
               {/* Diagram Output */}
-              <rect x="450" y="75" width="120" height="75" rx="15" ry="15" fill="#fff" stroke="#3b82f6" stroke-width="3"/>
-              <path d="M465 90 L555 90 L555 135 L465 135 Z M510 90 L510 135 M465 112.5 L555 112.5" fill="none" stroke="#333" stroke-width="1.5"/>
-              <text x="510" y="120" font-family="Arial" font-size="24" fill="#333" text-anchor="middle">Diagram</text>
+              <rect x="450" y="75" width="120" height="75" rx="15" ry="15" fill="#fff" stroke="#3b82f6" strokeWidth="3"/>
+              <path d="M465 90 L555 90 L555 135 L465 135 Z M510 90 L510 135 M465 112.5 L555 112.5" fill="none" stroke="#333" strokeWidth="1.5"/>
+              <text x="510" y="120" fontFamily="Arial" fontSize="24" fill="#333" textAnchor="middle">Diagram</text>
 
               {/* Arrowhead definition */}
               <defs>
@@ -521,7 +451,7 @@ User "1" -- "*" Product : owns
        <section id="testimonials" ref={(el) => (sectionRefs.current.testimonials = el)} className="py-20 bg-neutral-100">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-primary-dark to-primary flex items-center justify-center space-x-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote-left">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-quote-left">
               <path d="M10.3 2.6a1 1 0 0 1 1.7.7L13 6.5a1 1 0 0 1-.7 1.7l-2.9-.7a1 1 0 0 1-.7-1.7l.7-2.9a1 1 0 0 1 1.7-.7z"/>
               <path d="M10.3 13.6a1 1 0 0 1 1.7.7L13 17.5a1 1 0 0 1-.7 1.7l-2.9-.7a1 1 0 0 1-.7-1.7l.7-2.9a1 1 0 0 1 1.7-.7z"/>
             </svg>
@@ -532,22 +462,22 @@ User "1" -- "*" Product : owns
           <div className="flex justify-center mb-16">
             <svg width="600" height="200" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
               {/* Speech Bubble 1 */}
-              <rect x="20" y="20" width="160" height="80" rx="20" ry="20" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
-              <circle cx="60" cy="110" r="10" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
-              <line x1="60" y1="100" x2="80" y2="120" stroke="#3b82f6" stroke-width="2"/>
-              <text x="100" y="70" font-family="Arial" font-size="24" fill="#333" text-anchor="middle">Great!</text>
+              <rect x="20" y="20" width="160" height="80" rx="20" ry="20" fill="#e0f2fe" stroke="#3b82f6" strokeWidth="2"/>
+              <circle cx="60" cy="110" r="10" fill="#e0f2fe" stroke="#3b82f6" strokeWidth="2"/>
+              <line x1="60" y1="100" x2="80" y2="120" stroke="#3b82f6" strokeWidth="2"/>
+              <text x="100" y="70" fontFamily="Arial" fontSize="24" fill="#333" textAnchor="middle">Great!</text>
 
               {/* Speech Bubble 2 */}
-              <rect x="220" y="60" width="160" height="80" rx="20" ry="20" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
-              <circle cx="260" cy="150" r="10" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
-              <line x1="260" y1="140" x2="280" y2="160" stroke="#3b82f6" stroke-width="2"/>
-              <text x="300" y="110" font-family="Arial" font-size="24" fill="#333" text-anchor="middle">Awesome!</text>
+              <rect x="220" y="60" width="160" height="80" rx="20" ry="20" fill="#e0f2fe" stroke="#3b82f6" strokeWidth="2"/>
+              <circle cx="260" cy="150" r="10" fill="#e0f2fe" stroke="#3b82f6" strokeWidth="2"/>
+              <line x1="260" y1="140" x2="280" y2="160" stroke="#3b82f6" strokeWidth="2"/>
+              <text x="300" y="110" fontFamily="Arial" fontSize="24" fill="#333" textAnchor="middle">Awesome!</text>
 
               {/* Speech Bubble 3 */}
-              <rect x="420" y="20" width="160" height="80" rx="20" ry="20" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
-              <circle cx="460" cy="110" r="10" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/>
-              <line x1="460" y1="100" x2="480" y2="120" stroke="#3b82f6" stroke-width="2"/>
-              <text x="500" y="70" font-family="Arial" font-size="24" fill="#333" text-anchor="middle">Fantastic!</text>
+              <rect x="420" y="20" width="160" height="80" rx="20" ry="20" fill="#e0f2fe" stroke="#3b82f6" strokeWidth="2"/>
+              <circle cx="460" cy="110" r="10" fill="#e0f2fe" stroke="#3b82f6" strokeWidth="2"/>
+              <line x1="460" y1="100" x2="480" y2="120" stroke="#3b82f6" strokeWidth="2"/>
+              <text x="500" y="70" fontFamily="Arial" fontSize="24" fill="#333" textAnchor="middle">Fantastic!</text>
             </svg>
           </div>
 
@@ -583,14 +513,14 @@ User "1" -- "*" Product : owns
         <svg className="absolute inset-0 w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
           <defs>
             <pattern id="hex-pattern" width="20" height="17.32" patternUnits="userSpaceOnUse">
-              <path d="M10 0 L20 5 L20 15 L10 20 L0 15 L0 5 Z" fill="#fff" fill-opacity="0.1" />
+              <path d="M10 0 L20 5 L20 15 L10 20 L0 15 L0 5 Z" fill="#fff" fillOpacity="0.1" />
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#hex-pattern)" />
         </svg>
         <div className="container mx-auto px-6 text-center relative z-10">
           <h2 className="text-4xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-primary-dark to-primary flex items-center justify-center space-x-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-mail">
               <rect width="20" height="16" x="2" y="4" rx="2"/>
               <path d="m22 7-8.97 5.7a1.9 1.9 0 0 1-2.06 0L2 7"/>
             </svg>
@@ -612,7 +542,7 @@ User "1" -- "*" Product : owns
       {/* Call to Action Section */}
       <section className="py-20 bg-neutral-100 text-center">
         <h2 className="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-primary-dark to-primary flex items-center justify-center space-x-4">
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-rocket">
             <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74.5 5 2c1.26-1.5 5-2 5-2s-.5-3.74-2-5c1.5-1.26 2-5 2-5s-3.74-.5-5-2c-1.26 1.5-5 2-5 2s.5 3.74 2 5Z"/>
             <path d="M9 18v3c0 .5-.5 1-1 1H6s-1 0-1-1v-3c0-.5.5-1 1-1h2c.5 0 1 .5 1 1Z"/>
             <path d="M12 15h4c.5 0 1 .5 1 1v2c0 .5-.5 1-1 1h-4c-.5 0-1-.5-1-1v-2c0-.5.5-1 1-1Z"/>

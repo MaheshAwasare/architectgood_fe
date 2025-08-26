@@ -12,7 +12,7 @@ const DevOpsCourses: React.FC = () => {
         {/* DevOps Basics Course */}
         <Link to="/training/devops/devops-basics" className="block bg-white p-8 rounded-xl shadow-lg border border-neutral-200 hover:shadow-xl transition-shadow duration-300">
           <div className="text-primary mb-4 text-5xl flex justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-git-fork">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-git-fork">
               <circle cx="12" cy="18" r="3"/>
               <circle cx="6" cy="6" r="3"/>
               <circle cx="18" cy="6" r="3"/>

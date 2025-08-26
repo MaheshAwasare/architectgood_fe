@@ -12,7 +12,7 @@ const DesignCourses: React.FC = () => {
         {/* Architectural Design Patterns Course */}
         <Link to="/training/design/architectural-design-patterns" className="block bg-white p-8 rounded-xl shadow-lg border border-neutral-200 hover:shadow-xl transition-shadow duration-300">
           <div className="text-primary mb-4 text-5xl flex justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-boxes">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-boxes">
               <path d="M2.97 10.11a2 2 0 0 0 0 3.78l5.64 2.82a2 2 0 0 0 1.39 0L15.03 14a2 2 0 0 0 0-3.78l-5.64-2.82a2 2 0 0 0-1.39 0z"/>
               <path d="M2.97 14.78a2 2 0 0 0 0 3.78l5.64 2.82a2 2 0 0 0 1.39 0L15.03 18.67a2 2 0 0 0 0-3.78l-5.64-2.82a2 2 0 0 0-1.39 0z"/>
               <path d="M18.03 10.11a2 2 0 0 0 0 3.78l5.64 2.82a2 2 0 0 0 1.39 0L22.03 14a2 2 0 0 0 0-3.78l-5.64-2.82a2 2 0 0 0-1.39 0z"/>

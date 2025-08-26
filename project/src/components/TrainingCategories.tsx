@@ -13,7 +13,7 @@ const TrainingCategories: React.FC = () => {
         {/* Design Category */}
         <Link to="/training/design" className="block bg-white p-8 rounded-xl shadow-lg border border-neutral-200 hover:shadow-xl transition-shadow duration-300">
           <div className="text-primary mb-4 text-5xl flex justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-layout-dashboard">
               <rect width="7" height="9" x="3" y="3" rx="1"/>
               <rect width="7" height="5" x="14" y="3" rx="1"/>
               <rect width="7" height="9" x="14" y="12" rx="1"/>
@@ -27,7 +27,7 @@ const TrainingCategories: React.FC = () => {
         {/* DevOps Category */}
         <Link to="/training/devops" className="block bg-white p-8 rounded-xl shadow-lg border border-neutral-200 hover:shadow-xl transition-shadow duration-300">
           <div className="text-primary mb-4 text-5xl flex justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud-cog">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-cloud-cog">
               <path d="M12 20a8 8 0 0 0 0-16H9.5a4.5 4.5 0 0 0-4.5 4.5V9a7 7 0 0 0 8 7.75"/>
               <circle cx="12" cy="12" r="3"/>
               <path d="M12 8V6"/>
