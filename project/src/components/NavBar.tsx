@@ -196,15 +196,16 @@ const NavBar: React.FC<NavBarProps> = ({
             {/* Auth Section */}
             {isLoggedIn ? (
               <div className="flex items-center space-x-3">
-                <Link 
+                {/* <Link 
                   to="/profile" 
                   onClick={onShowProfile} 
                   className="px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors flex items-center gap-2"
                   title="Profile"
                 >
+                  
                   <User className="w-4 h-4" />
                   Profile
-                </Link>
+                </Link> */}
                 <button
                   onClick={onLogout}
                   className="px-3 py-2 text-gray-600 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors flex items-center gap-2"
@@ -383,7 +384,7 @@ const NavBar: React.FC<NavBarProps> = ({
               {/* Auth Section - Mobile */}
               {isLoggedIn ? (
                 <div className="border-t border-gray-200 pt-4 mt-4">
-                  <Link 
+                 {/* <Link 
                     to="/profile" 
                     onClick={() => { onShowProfile?.(); closeMobileMenu(); }}
                     className="text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors flex items-center space-x-2 px-4 py-2 rounded-lg"
@@ -391,6 +392,7 @@ const NavBar: React.FC<NavBarProps> = ({
                     <User className="w-5 h-5" />
                     <span>Profile</span>
                   </Link>
+                  */}
                   <button
                     onClick={() => { onLogout?.(); closeMobileMenu(); }}
                     className="w-full text-left text-gray-600 hover:text-red-600 hover:bg-red-50 transition-colors flex items-center space-x-2 px-4 py-2 rounded-lg"
