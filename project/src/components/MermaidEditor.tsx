@@ -154,7 +154,7 @@ const MermaidEditor: React.FC = () => {
                 value={code}
                 onChange={(e) => setCode(e.target.value)}
                 className="w-full h-96 p-4 font-mono text-sm border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                className="w-full h-96 p-4 font-mono text-sm border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
+                
                 placeholder="Enter your Mermaid code here..."
                 spellCheck={false}
               />
