@@ -50,7 +50,7 @@ const NavBar: React.FC<NavBarProps> = ({
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center space-x-6">
             {!isLoggedIn ? (
               <>
                 {/* Landing Page Navigation */}
