@@ -357,6 +357,7 @@ const NavBar: React.FC<NavBarProps> = ({
                 <Rss className="w-5 h-5" />
                 <span>Blog</span>
               </Link>
+              {/* 
               <Link 
                 to="/training" 
                 onClick={closeMobileMenu}
@@ -365,7 +366,7 @@ const NavBar: React.FC<NavBarProps> = ({
                 <GraduationCap className="w-5 h-5" />
                 <span>Training</span>
               </Link>
-
+*/}
               {/* Auth Section - Mobile */}
               {isLoggedIn ? (
                 <div className="border-t border-gray-200 pt-4 mt-4">
